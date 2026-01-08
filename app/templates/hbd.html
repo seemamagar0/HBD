@@ -68,19 +68,31 @@
             color: #ff4d88;
             font-size: 36px;
             margin-bottom: 8px;
-            text-shadow: 0 0 15px rgba(255, 77, 136, 0.6);
         }
 
-        h2 { color: #666; margin-bottom: 15px; font-size: 20px; }
+        h2 {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
 
-        .cake { font-size: 60px; margin: 10px 0; animation: bounce 1.5s infinite; }
+        .cake {
+            font-size: 60px;
+            margin: 10px 0;
+            animation: bounce 1.5s infinite;
+        }
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
 
-        .message { color: #555; margin: 20px 0; line-height: 1.6; font-size: 16px; }
+        .message {
+            color: #555;
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
 
         .btn {
             margin-top: 20px;
@@ -95,54 +107,63 @@
             transition: all 0.3s ease;
         }
 
-        .btn:hover { transform: scale(1.1); box-shadow: 0 12px 28px rgba(255,77,136,0.7); }
-
-        .photos { display: none; margin-top: 25px; animation: fadeIn 1s ease-in-out; flex-wrap: wrap; justify-content: center; }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-        .photos img {
-            width: 120px; height: 120px; object-fit: cover; border-radius: 20px; margin: 6px;
-            box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
-            transition: transform 0.3s ease;
+        .btn:hover {
+            transform: scale(1.1);
         }
 
-        .photos img:hover { transform: scale(1.1) rotate(2deg); }
+        .photos {
+            display: none;
+            margin-top: 25px;
+            animation: fadeIn 1s ease-in-out;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-        small { display: block; margin-top: 20px; color: #888; font-size: 14px; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-        @media (max-width: 480px) {
-            h1 { font-size: 28px; }
-            h2 { font-size: 18px; }
-            .cake { font-size: 50px; }
-            .message { font-size: 15px; }
-            .btn { padding: 12px 24px; font-size: 15px; }
-            .photos img { width: 100px; height: 100px; }
+        .photos img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 6px;
+            box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        small {
+            display: block;
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
 <!-- Floating hearts -->
-<div class="heart" style="left: 5%; animation-delay: 0s;">❤️</div>
-<div class="heart" style="left: 25%; animation-delay: 2s;">💖</div>
-<div class="heart" style="left: 50%; animation-delay: 1s;">💕</div>
-<div class="heart" style="left: 75%; animation-delay: 3s;">💘</div>
-<div class="heart" style="left: 90%; animation-delay: 4s;">💞</div>
+<div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
+<div class="heart" style="left: 30%; animation-delay: 2s;">💕</div>
+<div class="heart" style="left: 60%; animation-delay: 1s;">💞</div>
+<div class="heart" style="left: 80%; animation-delay: 3s;">💘</div>
 
 <div class="card">
-    <h1>Happy Birthday 💖</h1>
-    <h2>{{ name }} 🎉</h2>
+    <h1>Happy Birthday 🎉</h1>
+    <h2>{{ name }} 💖</h2>
 
-    <div class="cake">🎂🎈</div>
+    <div class="cake">🎂</div>
 
+    <!-- FRIEND WISH -->
     <p class="message">
-        Wishing the happiest birthday to the most amazing boyfriend! 💖🥰<br>
-        I’m so lucky to have you. Being with you is my favorite part of life, and I’m so thankful for every memory we share. May your day be filled with love, joy, and all your favorite things. 💞
+        Happy Birthday, my friend 💕✨<br>
+        May your day be full of smiles, laughter, and beautiful memories. So lucky to have a friend like you 💖
     </p>
 
     <button class="btn" onclick="showPhotos()">Click Me 💌</button>
 
+    <!-- PHOTO GALLERY -->
     <div class="photos" id="photoGallery">
         <img src="{% static 'images/ph1.jpeg' %}" alt="Memory 1">
         <img src="{% static 'images/ph2.jpeg' %}" alt="Memory 2">

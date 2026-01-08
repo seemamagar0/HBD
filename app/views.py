@@ -1,12 +1,9 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.utils import timezone
 
 def happy_birthday(request):
-    # Example: you can fetch user from DB later
     context = {
-        "name": "Syaanuuu💗",
+        "name": "Dost 🎉",   # Change name if you want
         "today": timezone.now().date(),
     }
     return render(request, "hbd.html", context)
